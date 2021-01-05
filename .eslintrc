@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "plugin:nuxt/recommended"
+  ],
+  "plugins": ["nuxt"],
+  "rules": {
+
+  }
+}
