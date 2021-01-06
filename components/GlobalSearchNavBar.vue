@@ -1,17 +1,18 @@
 <template>
   <b-navbar
-    class="mb-2"
-    variant="dark"
-    type="dark"
+      class="mb-2"
+      variant="dark"
+      type="dark"
   >
     <b-container>
       <b-navbar-brand
-        tag="h1"
-        class="mb-0"
-      >Nuxt-Memo
+          tag="h1"
+          class="mb-0"
+          to="/"
+      >
+        Nuxt-Memo
       </b-navbar-brand>
       <b-navbar-nav class="ml-auto">
-
         <b-nav-form class="mr-2">
           <b-input-group size="sm">
             <b-form-input placeholder="검색"></b-form-input>
@@ -22,10 +23,13 @@
             </b-input-group-append>
           </b-input-group>
         </b-nav-form>
-        <b-nav-item>
+        <b-nav-item to="/">
+          메모장
+        </b-nav-item>
+        <b-nav-item to="profile">
           프로필
         </b-nav-item>
-        <b-nav-item>
+        <b-nav-item to="login">
           로그인
         </b-nav-item>
       </b-navbar-nav>
@@ -35,8 +39,8 @@
 
 <script>
 export default {
-  name: "GlobalSearchNavBar"
-}
+  name: 'GlobalSearchNavBar',
+};
 </script>
 
 <style scoped>
