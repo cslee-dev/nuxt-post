@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="mt-3">
     <b-card no-body>
       <b-card-body>
         <b-card-title>
-          로스군
+          {{ memo.nickname }}
           <b-btn
               pill
               type="button"
@@ -14,10 +14,10 @@
           </b-btn>
         </b-card-title>
         <b-card-sub-title>
-          2021-01-06
+          {{ memo.created_at }}
         </b-card-sub-title>
         <b-card-text>
-          안녕하세요. nuxt memo 서비스를 만들어 볼까요?
+          {{ memo.content }}
         </b-card-text>
       </b-card-body>
       <b-list-group flush>
@@ -63,6 +63,7 @@ import CommentForm from '@/components/CommentForm';
 
 export default {
   name: 'MemoCard',
+  props: ['memo'],
   components: {
     CommentForm,
   },
