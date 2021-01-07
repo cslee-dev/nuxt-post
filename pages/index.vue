@@ -48,8 +48,9 @@ import {mapState} from 'vuex';
 
 export default {
   name: 'index',
-  async asyncData({store}) {
-    store.dispatch('memos/asyncMemo');
+  async fetch({store}) {
+    const memos = await store.dispatch('memos/asyncMemo');
+    return memos
   },
   components: {
     MemoCard,
